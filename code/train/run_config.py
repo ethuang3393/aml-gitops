@@ -4,7 +4,7 @@ from azureml.train.estimator import Estimator
 
 def main(workspace):
     # Load compute target
-    print("Loading compute target")
+    print("Loading compute target githubcluster")
     compute_target = ComputeTarget(
         workspace=workspace,
         name="githubcluster"
