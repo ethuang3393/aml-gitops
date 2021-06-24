@@ -1,4 +1,4 @@
-name: slash-command
+name: slash_command
 
 on:
   issue_comment:
@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slash Command Dispatch
-        id: slash_command
         uses: peter-evans/slash-command-dispatch@v2
         with:
           token: ${{ secrets.GitHubActionsPAT }}
