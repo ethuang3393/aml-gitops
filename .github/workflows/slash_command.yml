@@ -12,8 +12,8 @@ jobs:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v2
         with:
-          token: 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
-          reaction-token: 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
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          reaction-token: ${{ secrets.REPO_ACCESS_TOKEN }}
           commands: deploy
           reactions: dispatched
           permission: write
