@@ -13,8 +13,8 @@ jobs:
         id: slash_command
         uses: peter-evans/slash-command-dispatch@v1.1.2
         with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          reaction-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
+          reaction-token: ${{ secrets.PAT }}
           commands: deploy
           reactions: dispatched
           permission: write
