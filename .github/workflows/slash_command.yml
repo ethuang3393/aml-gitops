@@ -12,8 +12,8 @@ jobs:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v2
         with:
-          token: ${{ secrets.GitHubActionsPAT }}
-          reaction-token: ${{ secrets.GitHubActionsPAT }}
+          token: ${{ secrets.PAT }}
+          reaction-token: ${{ secrets.PAT }}
           commands: deploy
           reactions: dispatched
           permission: write
