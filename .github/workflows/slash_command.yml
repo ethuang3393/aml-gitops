@@ -5,15 +5,15 @@ on:
     types: [created]
 
 jobs:
-  # This is the dispatch for slash commands in the repo
+  # This is the dispatch for slash commands in the repo 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
   slash_command:
     runs-on: ubuntu-latest
     steps:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v2
         with:
-          token: ${{ secrets.PAT }}
-          reaction-token: ${{ secrets.PAT }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          reaction-token: ${{ secrets.REPO_ACCESS_TOKEN }}
           commands: deploy
           reactions: dispatched
           permission: write
