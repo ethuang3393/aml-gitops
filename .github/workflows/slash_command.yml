@@ -11,12 +11,11 @@ jobs:
     steps:
       - name: Slash Command Dispatch
         id: slash_command
-        uses: peter-evans/slash-command-dispatch@v1.1.2
+        uses: peter-evans/slash-command-dispatch@v2
         with:
-          token: ${{ secrets.PAT }}
-          reaction-token: ${{ secrets.PAT }}
+          token: ${{ secrets.GitHubActionsPAT }}
+          reaction-token: ${{ secrets.GitHubActionsPAT }}
           commands: deploy
           reactions: dispatched
           permission: write
           issue-type: pull-request
-          named-args: true
