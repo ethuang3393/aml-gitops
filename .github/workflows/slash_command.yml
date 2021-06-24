@@ -12,8 +12,8 @@ jobs:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v2
         with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          reaction-token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          token: ${{ secrets.REPO_PAT }}
+          reaction-token: ${{ secrets.REPO_PAT }}
           commands: deploy
           reactions: dispatched
           permission: write
